@@ -87,26 +87,26 @@ export const dashboardAPI = {
 export const categoryAPI = {
   getCategories: async (token: string, page = 1, limit = 10) => {
     const http = createAxios(token)
-    return http.get("/service-category", { params: { page, limit } })
+    return http.get("/category", { params: { page, limit } })
   },
 
   createCategory: async (data: FormData, token: string) => {
     const http = createAxios(token, {
       headers: { "Content-Type": "multipart/form-data" },
     })
-    return http.post("/service-category", data)
+    return http.post("/category", data)
   },
 
   updateCategory: async (id: string, data: FormData, token: string) => {
     const http = createAxios(token, {
       headers: { "Content-Type": "multipart/form-data" },
     })
-    return http.put(`/service-category/${id}`, data)
+    return http.put(`/category/${id}`, data)
   },
 
   deleteCategory: async (id: string, token: string) => {
     const http = createAxios(token)
-    return http.delete(`/service-category/${id}`)
+    return http.delete(`/category/${id}`)
   },
 }
 

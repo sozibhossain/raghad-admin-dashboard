@@ -4,7 +4,7 @@ import React from 'react'
 
 function page() {
 
-    redirect('admin/dashboard')
+    redirect('/admin/dashboard')
   return (
     <div>page</div>
   )
